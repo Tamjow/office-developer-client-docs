@@ -466,6 +466,7 @@ Use the following procedure to open a **PackagePart** as an XML document in an *
         // open the stream in an XDocument object.
         Stream partStream = packagePart.GetStream();
         partXml = XDocument.Load(partStream);
+        partStream.Close();
         return partXml;
     }
     ```
@@ -477,6 +478,7 @@ Use the following procedure to open a **PackagePart** as an XML document in an *
         ' open the stream in an an XDocument object.
         Dim partStream As Stream = packagePart.GetStream()
         partXml = XDocument.Load(partStream)
+        partStream.Close()
         Return partXml
     End Function
     ```
